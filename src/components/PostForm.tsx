@@ -5,14 +5,19 @@ import Modal from 'react-modal';
 interface Props {
     onSubmit: (post: Post) => void;
     onClose: () => void;
-    onOpen: (open: boolean) => void;
+    open: boolean;
 }
 
-function PostForm({onSubmit, onClose, onOpen}: Props ) {
+function PostForm({onSubmit, onClose, open}: Props ) {
     const [title, setTitle] = useState("");
     const [thought, setThought] = useState("");
 
-    const[modalIsOpen, setIsOpen] = useState(false);
+    
+    let openForm = false;
+    if(open){
+  
+        openForm = true;
+    }
 
     function handleFormSubmit(e:FormEvent){
         e.preventDefault();
@@ -21,23 +26,23 @@ function PostForm({onSubmit, onClose, onOpen}: Props ) {
             thought: thought
         };
         onSubmit(newPost);
-        onOpen(true);
+        onClose();
     }
-    function openModal(open: boolean){
-        setIsOpen(open);
-    }
-    function closeModal(){
-        setIsOpen(false);
-    }
+    // function openModal(open: boolean){
+    //     setIsOpen(open);
+    // }
+    // function closeModal(){
+    //     setIsOpen(false);
+    // }
 
     return (
 
         <div className="PostForm" onSubmit={handleFormSubmit}>
 
-               {/* <Modal
-                isOpen={modalIsOpen}
+               <Modal
+                isOpen={openForm}
                 onRequestClose={onClose} // closeModal
-               > */}
+               >
             <form>
                 <p>Title</p>
                 <input type="text" name="title" id="title" onChange={e => setTitle(e.target.value)}/>
@@ -45,7 +50,7 @@ function PostForm({onSubmit, onClose, onOpen}: Props ) {
                 <textarea id="thought" name="thought" rows={5} onChange={e => setThought(e.target.value)}></textarea>
                 <button type='submit' onClick={handleFormSubmit}>Add Post</button>
             </form>
-            {/* </Modal> */}
+            </Modal>
         </div>
     )
 }
