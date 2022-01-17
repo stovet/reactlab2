@@ -7,7 +7,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     /* background-color: #f3f1f7; */
     font-family: 'Dosis', sans-serif;
 }
@@ -17,7 +17,7 @@ html {
     font-family: Homemade Apple;
 }
 button {
-    width: 75%;
+    width: 600px;
     height: 50px;
     background-color: #03a9f4;
     color: white;
@@ -27,7 +27,12 @@ button {
 }
 
 .PostInList {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 75%;
     background-color: white;
+}
+
+.PostForm.modal {
+    background-color: #79c5e8;
+    width: 400px;
 }

@@ -22,9 +22,6 @@ function SocialPosts(){
     function onClose():void{
         setIsOpen(false);
     }
-    function handleFormOpen(){
-        //<PostForm onSubmit={handleFormSubmit} onClose={() => handleFormClose} open={isOpen}/>
-    }
    
     function handleDeleteList(index: number) {
         setPosts(prev => [...prev.slice(0, index), ...prev.slice(index+1)]);
@@ -35,16 +32,16 @@ function SocialPosts(){
         <div className="SocialPosts">
             <h1 className="myThoughts">My Thoughts</h1>
             <button onClick={() => setIsOpen(true)}>New Thought</button>
-            {/* <button onClick={() => handleFormOpen}>New Thought</button> */}
-            {/* <button onClick={<PostForm onSubmit={posts} onClose={setOpenForm(true)}/>>}>New Thought</button> */}
-            {posts.map((post, i) => 
-                <PostInList key={i} post={post} onDelete={() => handleDeleteList(i)}/>
-            )}
+            <div className="postContainer" >
+                {posts.map((post, i) => 
+                    <PostInList key={i} post={post} onDelete={() => handleDeleteList(i)}/>
+                )}
 
-            <PostForm 
-            onSubmit={handleFormSubmit} 
-            onClose={onClose} 
-            open={isOpen}/>
+                <PostForm 
+                onSubmit={handleFormSubmit} 
+                onClose={onClose} 
+                open={isOpen}/>
+            </div>
         </div>
     )
 }

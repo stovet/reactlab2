@@ -2,8 +2,33 @@
 .PostForm {
     background-color: #79c5e8;
     font-family: 'Dosis', sans-serif;
+    width: 600px;
+    height: 400px;
+}
+.PostForm form {
+    display: flex;
+    flex-direction: column;
+}
+/* modal-body {
+    height: 300px;
+    width: 400px;
+    background-color: lightcoral;
+} */
+
+.modal-backdrop {
+    background-color: lightcoral;
 }
 
 .hidden {
     display: none;
+}
+
+.material-icons {
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+.form {
+    background-color: #79c5e8;
 }

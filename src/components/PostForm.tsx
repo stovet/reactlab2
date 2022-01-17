@@ -27,6 +27,8 @@ function PostForm({onSubmit, onClose, open}: Props ) {
         };
         onSubmit(newPost);
         onClose();
+        setTitle("");
+        setThought("");
     }
     // function openModal(open: boolean){
     //     setIsOpen(open);
@@ -40,10 +42,11 @@ function PostForm({onSubmit, onClose, open}: Props ) {
         <div className="PostForm" onSubmit={handleFormSubmit}>
 
                <Modal
+               className="modal"
                 isOpen={openForm}
                 onRequestClose={onClose} // closeModal
                >
-            <form>
+            <form className="form">
             <i className="material-icons" onClick={onClose}>close</i>
                 <p>Title</p>
                 <input type="text" name="title" id="title" onChange={e => setTitle(e.target.value)}/>

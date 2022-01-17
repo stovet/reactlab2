@@ -12,11 +12,13 @@ function PostInList({post, onDelete}: Props){
     
 
     return (
+        // <div className="postContainer">
         <div className='PostInList'>
             <i className="material-icons" onClick={onDelete}>delete</i>
             <h2>{post.title}</h2>
             <p>{post.thought}</p>
         </div>
+        // </div>
     )
 }
 
