@@ -44,6 +44,7 @@ function PostForm({onSubmit, onClose, open}: Props ) {
                 onRequestClose={onClose} // closeModal
                >
             <form>
+            <i className="material-icons" onClick={onClose}>close</i>
                 <p>Title</p>
                 <input type="text" name="title" id="title" onChange={e => setTitle(e.target.value)}/>
                 <p>Thought</p>
