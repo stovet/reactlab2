@@ -30,3 +30,16 @@ form {
 .form {
     background-color: #79c5e8;
 }
+button {
+    margin-top: 10px;
+    
+}
+.title {
+    position: relative;
+    right: 70px;
+}
+.thought {
+    position: relative;
+    right: 60px;
+   
+}

@@ -34,6 +34,8 @@ i.material-icons {
     border: 2px solid black;
 }
 
-.trashcan {
-    /* font-size: 0.5px; */
+p.thought {
+    position: relative;
+    padding-bottom: 5px;
+    left: 0px;
 }

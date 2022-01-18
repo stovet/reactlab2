@@ -44,9 +44,9 @@ function PostForm({onSubmit, onClose, open}: Props ) {
                >
             <form className="form">
             <i className="material-icons" onClick={onClose}>close</i>
-                <p>Title</p>
+                <p className="title">Title</p>
                 <input type="text" name="title" id="title" onChange={e => setTitle(e.target.value)}/>
-                <p>Thought</p>
+                <p className="thought">Thought</p>
                 <textarea id="thought" name="thought" rows={5} onChange={e => setThought(e.target.value)}></textarea>
                 <button type='submit' onClick={handleFormSubmit}>Add Post</button>
             </form>
