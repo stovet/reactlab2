@@ -1,13 +1,15 @@
 
 .PostForm {
-    background-color: #79c5e8;
+    
+    position: relative;
     font-family: 'Dosis', sans-serif;
     width: 600px;
-    height: 400px;
+    height: auto;
 }
-.PostForm form {
+form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 /* modal-body {
     height: 300px;
@@ -15,16 +17,12 @@
     background-color: lightcoral;
 } */
 
-.modal-backdrop {
-    background-color: lightcoral;
-}
-
 .hidden {
     display: none;
 }
 
 .material-icons {
-    position: relative;
+    position: absolute;
     top: 5px;
     right: 5px;
 }

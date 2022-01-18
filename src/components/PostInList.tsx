@@ -14,8 +14,9 @@ function PostInList({post, onDelete}: Props){
     return (
         // <div className="postContainer">
         <div className='PostInList'>
-            <i className="material-icons" onClick={onDelete}>delete</i>
+            
             <h2>{post.title}</h2>
+            <span className="trashcan"><i className="material-icons" onClick={onDelete}>delete</i></span>
             <p>{post.thought}</p>
         </div>
         // </div>

@@ -24,7 +24,8 @@ function SocialPosts(){
     }
    
     function handleDeleteList(index: number) {
-        setPosts(prev => [...prev.slice(0, index), ...prev.slice(index+1)]);
+        setPosts(prev => 
+            [...prev.slice(0, index), ...prev.slice(index+1)]);
     }
 
     
@@ -34,7 +35,8 @@ function SocialPosts(){
             <button onClick={() => setIsOpen(true)}>New Thought</button>
             <div className="postContainer" >
                 {posts.map((post, i) => 
-                    <PostInList key={i} post={post} onDelete={() => handleDeleteList(i)}/>
+                    <PostInList key={i} post={post} 
+                    onDelete={() => handleDeleteList(i)}/>
                 )}
 
                 <PostForm 

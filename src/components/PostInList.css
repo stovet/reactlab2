@@ -6,8 +6,7 @@
 
 .PostInList {
     font-family: 'Dosis', sans-serif;
-    /* border-bottom: 2px solid lightgray;
-    border-width: 100%; */
+    height: auto;
    
 }
 
@@ -24,8 +23,8 @@ p {
     padding-left: 25px;
 }
 i.material-icons {
-    position: absolute;
-    right: 5px;
+    position: relative;
+    left: 500px;
 }
 .postContainer {
     position: relative;
@@ -33,4 +32,8 @@ i.material-icons {
     height: auto;
     background-color: white;
     border: 2px solid black;
+}
+
+.trashcan {
+    /* font-size: 0.5px; */
 }

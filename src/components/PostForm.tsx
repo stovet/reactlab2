@@ -1,6 +1,7 @@
 import React, { FormEvent, useState } from 'react';
 import Post from '../models/Post';
 import Modal from 'react-modal';
+import './PostForm.css';
 
 interface Props {
     onSubmit: (post: Post) => void;
@@ -30,19 +31,14 @@ function PostForm({onSubmit, onClose, open}: Props ) {
         setTitle("");
         setThought("");
     }
-    // function openModal(open: boolean){
-    //     setIsOpen(open);
-    // }
-    // function closeModal(){
-    //     setIsOpen(false);
-    // }
 
+  
     return (
 
         <div className="PostForm" onSubmit={handleFormSubmit}>
 
                <Modal
-               className="modal"
+                className="modal"
                 isOpen={openForm}
                 onRequestClose={onClose} // closeModal
                >
